@@ -1,4 +1,4 @@
-# BefriendBackend
+# Getting Started
 
 To start your Phoenix server:
 
@@ -8,7 +8,30 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+# Signing Up
+- POST http://localhost:4000/api/v1/sign_up
+- Expected json body formart
+```json
+{
+	"user": {
+		"email": "yourname@gmail.com",
+		"password": "somepassword",
+		"password_confirmation": "somepassword"
+	}
+}
+```
+
+# Signin
+- POST http://localhost:4000/api/v1/sign_in
+- Expected json body formart
+```json
+{
+	"email": "yourname@gmail.com",
+	"password": "somepassword"
+}
+```
+
+
 
 ## Learn more
 
