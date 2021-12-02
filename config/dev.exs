@@ -1,10 +1,10 @@
 import Config
 
 # Configure your database
-config :phoenixbackend, Phoenixbackend.Repo,
+config :befriend_backend, BefriendBackend.Repo,
   username: "postgres",
   password: "postgres",
-  database: "phoenixbackend_dev",
+  database: "befriend_backend_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,14 +15,14 @@ config :phoenixbackend, Phoenixbackend.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :phoenixbackend, PhoenixbackendWeb.Endpoint,
+config :befriend_backend, BefriendBackendWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "H7FNAmQoY9hOtxr+xpsC6yj78JWuuQhNVLKu+UtcQkKNJbZZ6up+ofId7LGTQZbk",
+  secret_key_base: "gJMrcJ8F0a3ZhimoFrpFnQPevhY6x3cf5jt8Ubvp8IH4YL9nnnsOBOCqkCUxf4PB",
   watchers: []
 
 # ## SSL Support

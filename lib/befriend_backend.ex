@@ -1,6 +1,6 @@
-defmodule Phoenixbackend do
+defmodule BefriendBackend do
   @moduledoc """
-  Phoenixbackend keeps the contexts that define your domain
+  BefriendBackend keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

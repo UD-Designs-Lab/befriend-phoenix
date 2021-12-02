@@ -1,4 +1,4 @@
-defmodule PhoenixbackendWeb.ErrorHelpers do
+defmodule BefriendBackendWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -25,9 +25,9 @@ defmodule PhoenixbackendWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(PhoenixbackendWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(BefriendBackendWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(PhoenixbackendWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(BefriendBackendWeb.Gettext, "errors", msg, opts)
     end
   end
 end

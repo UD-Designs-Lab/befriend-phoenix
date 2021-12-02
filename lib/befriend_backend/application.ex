@@ -1,4 +1,4 @@
-defmodule Phoenixbackend.Application do
+defmodule BefriendBackend.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,20 +9,20 @@ defmodule Phoenixbackend.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      Phoenixbackend.Repo,
+      BefriendBackend.Repo,
       # Start the Telemetry supervisor
-      PhoenixbackendWeb.Telemetry,
+      BefriendBackendWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Phoenixbackend.PubSub},
+      {Phoenix.PubSub, name: BefriendBackend.PubSub},
       # Start the Endpoint (http/https)
-      PhoenixbackendWeb.Endpoint
-      # Start a worker by calling: Phoenixbackend.Worker.start_link(arg)
-      # {Phoenixbackend.Worker, arg}
+      BefriendBackendWeb.Endpoint
+      # Start a worker by calling: BefriendBackend.Worker.start_link(arg)
+      # {BefriendBackend.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Phoenixbackend.Supervisor]
+    opts = [strategy: :one_for_one, name: BefriendBackend.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -30,7 +30,7 @@ defmodule Phoenixbackend.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    PhoenixbackendWeb.Endpoint.config_change(changed, removed)
+    BefriendBackendWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

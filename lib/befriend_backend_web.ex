@@ -1,12 +1,12 @@
-defmodule PhoenixbackendWeb do
+defmodule BefriendBackendWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use PhoenixbackendWeb, :controller
-      use PhoenixbackendWeb, :view
+      use BefriendBackendWeb, :controller
+      use BefriendBackendWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule PhoenixbackendWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: PhoenixbackendWeb
+      use Phoenix.Controller, namespace: BefriendBackendWeb
 
       import Plug.Conn
-      import PhoenixbackendWeb.Gettext
-      alias PhoenixbackendWeb.Router.Helpers, as: Routes
+      import BefriendBackendWeb.Gettext
+      alias BefriendBackendWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/phoenixbackend_web/templates",
-        namespace: PhoenixbackendWeb
+        root: "lib/befriend_backend_web/templates",
+        namespace: BefriendBackendWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,7 +54,7 @@ defmodule PhoenixbackendWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import PhoenixbackendWeb.Gettext
+      import BefriendBackendWeb.Gettext
     end
   end
 
@@ -63,9 +63,9 @@ defmodule PhoenixbackendWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import PhoenixbackendWeb.ErrorHelpers
-      import PhoenixbackendWeb.Gettext
-      alias PhoenixbackendWeb.Router.Helpers, as: Routes
+      import BefriendBackendWeb.ErrorHelpers
+      import BefriendBackendWeb.Gettext
+      alias BefriendBackendWeb.Router.Helpers, as: Routes
     end
   end
 

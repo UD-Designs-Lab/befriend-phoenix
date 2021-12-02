@@ -1,4 +1,4 @@
-# Phoenixbackend
+# BefriendBackend
 
 To start your Phoenix server:
 

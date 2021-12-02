@@ -1,11 +1,11 @@
-defmodule PhoenixbackendWeb.Router do
-  use PhoenixbackendWeb, :router
+defmodule BefriendBackendWeb.Router do
+  use BefriendBackendWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", PhoenixbackendWeb do
+  scope "/api", BefriendBackendWeb do
     pipe_through :api
   end
 
@@ -21,7 +21,7 @@ defmodule PhoenixbackendWeb.Router do
 
     scope "/" do
       pipe_through [:fetch_session, :protect_from_forgery]
-      live_dashboard "/dashboard", metrics: PhoenixbackendWeb.Telemetry
+      live_dashboard "/dashboard", metrics: BefriendBackendWeb.Telemetry
     end
   end
 

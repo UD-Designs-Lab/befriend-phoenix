@@ -7,15 +7,15 @@
 # General application configuration
 import Config
 
-config :phoenixbackend,
-  ecto_repos: [Phoenixbackend.Repo]
+config :befriend_backend,
+  ecto_repos: [BefriendBackend.Repo]
 
 # Configures the endpoint
-config :phoenixbackend, PhoenixbackendWeb.Endpoint,
+config :befriend_backend, BefriendBackendWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: PhoenixbackendWeb.ErrorView, accepts: ~w(json), layout: false],
-  pubsub_server: Phoenixbackend.PubSub,
-  live_view: [signing_salt: "JFO9miNm"]
+  render_errors: [view: BefriendBackendWeb.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: BefriendBackend.PubSub,
+  live_view: [signing_salt: "RVWIPxxh"]
 
 # Configures the mailer
 #
@@ -24,7 +24,7 @@ config :phoenixbackend, PhoenixbackendWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :phoenixbackend, Phoenixbackend.Mailer, adapter: Swoosh.Adapters.Local
+config :befriend_backend, BefriendBackend.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
