@@ -1,12 +1,28 @@
 defmodule BefriendBackendWeb.Router do
   use BefriendBackendWeb, :router
 
+  alias BefriendBackendWeb.Guardian
+
+
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", BefriendBackendWeb do
+  pipeline :jwt_authenticated do
+    plug Guardian.AuthPipeline
+  end
+
+  scope "/api/v1", BefriendBackendWeb do
     pipe_through :api
+
+    post "/sign_up", UserController, :create
+    post "/sign_in", UserController, :sign_in
+  end
+
+  scope "/api/v1", BefriendBackendWeb do
+    pipe_through [:api, :jwt_authenticated]
+
+    get "/my_user", UserController, :show
   end
 
   # Enables LiveDashboard only for development
